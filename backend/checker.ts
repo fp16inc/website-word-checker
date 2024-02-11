@@ -62,6 +62,7 @@ export default async function Checker(url: string, openAiApiKey: string) {
       maxTokens: 4000,
       modelName: 'gpt-4-0125-preview',
       openAIApiKey: openAiApiKey,
+      temperature: 0.3
     })
 
     const chain = RetrievalQAChain.fromLLM(model, store.asRetriever())
